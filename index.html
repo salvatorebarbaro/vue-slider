@@ -29,7 +29,8 @@
                 </span>
             </div>
             <div id="a_side">
-                <img @click="counterSlide=index" v-for="(slide,index) in slides" :src="slide.image" alt="immagini">
+                <img @click="counterSlide=index" v-for="(slide,index) in slides" :src="slide.image" alt="immagini" :class="  index == counterSlide ? 'active':` ` " >
+                
                 <!-- @click="nextSlide() add event listner con funzione associata  -->
                 <i @click="nextSlide()" class="fa-solid fa-arrow-up"></i>
                 <i @click="previusSlide()" class="fa-solid fa-arrow-down"></i>
